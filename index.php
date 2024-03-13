@@ -1,7 +1,8 @@
+
 Spider
 <br></br>
 <?php
-include 'functions.php';
+/*include 'functions.php';
 //test_get_href("https://www.electro-mpo.ru");
 
 
@@ -33,26 +34,28 @@ foreach($t as $t1)
 
 }
     
+*/
+?>
+
+Ок
+<br><br>
+ 
+<?php
+ 
+include "functions.php";
+
+$url = "https://aif.ru/society/na_ukraine_poyavilsya_nekrolog_o_zenitchike_vsu_na_fone_zrk_patriot";
+ 
+$u=get_href($url);         //$u - многомерный массив, первый столбик которого - ссылка, а второй признак
+//print_r($u);
 
 
 
+for ($i=0; $i<count($u[0]); $i++) 
+{
+too($u[0][$i],$u[1][$i]); // пишем ссылку в БД
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 ?>
