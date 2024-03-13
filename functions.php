@@ -20,10 +20,7 @@ function get_title($url) //получение ссылок
     return($data[1][0]);
 }
 
-const("DB_SERVER", "localhost");
-const("DB_USER", "root");
-const("DB_PASSWORD", "root");
-const("DB_NAME", "spider");
+
 
 
 
