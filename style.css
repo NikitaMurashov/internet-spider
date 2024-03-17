@@ -1,0 +1,66 @@
+.red_button
+{
+    -webkit-writing-mode: horizontal-tb !important;
+    -webkit-appearance: button;
+    border-color: rgb(255, 0, 0) rgb(255, 0, 0) rgb(255, 0, 0);
+    border-style: solid;
+    border-width: 1px;
+    padding: 1px 7px 2px;
+    text-rendering: auto;
+    color: initial;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 400 11px system-ui;
+}
+.main_name
+{
+
+margin: 0 auto;
+width: 800px; 
+
+text-align: center;
+
+padding-left: 20px;
+padding-right: 20px;
+padding-top: 20px;
+padding-bottom: 20px;
+
+
+color: rgb(69, 62, 168);
+font-family:Verdana, Geneva, Tahoma, sans-serif ;
+font-size: 700%;
+}
+
+.main_div
+{
+background: #0066ff;
+margin: 0 auto;
+width: 800px; 
+
+padding-left: 20px;
+padding-right: 20px;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+.main_info
+{
+
+margin: 0 auto;
+width: 900px; 
+
+padding-left: 20px;
+padding-right: 20px;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+
+.span1
+{
+
+    color: rgb(255, 242, 0);
+    font-weight: bold;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ font-size: 150%;
+
+}

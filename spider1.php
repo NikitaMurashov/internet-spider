@@ -1,13 +1,20 @@
-Ок
-<br><br>
+<!DOCTYPE html>
+<html>
+    <head>
+           <title>Паук №1</title>
+       </head>
+    <body>
+   <h1> Паук 1 запущен </h1>
+   <img src="spa1.jpg" > 
+<br>
+
 
 <?php
-
 include "functions.php";
 
 $record = intoo("www");
 $id = $record['id'];
-$url = "https://aif.ru";   //$record['href'];
+$url = $record['href'];
 
 echo "Получено: <br>";
 echo "URL:";  echo $url;
@@ -16,11 +23,20 @@ echo "id:";   echo $id;
 
 echo "<br>"; echo "<br>"; echo "<br>"; echo "<br>";
 
+$t=get_title($url);
+title_too($t, $id);
+
+
 $u=get_href($url);         //$u - многомерный массив, первый столбик которого - ссылка, а второй признак
 
 for ($i=0; $i<count($u[0]); $i++) too($u[0][$i], $u[1][$i]); // пишем ссылку в БД
+/*
+{
+  echo $u[0][$i];  echo "<br>";
 
+}
 
+*/
 
 
 
