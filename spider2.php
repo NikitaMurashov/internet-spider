@@ -23,12 +23,12 @@ echo "<br>";
 echo "id:";   echo $id;
 
 echo "<br>"; echo "<br>"; echo "<br>"; echo "<br>";
-
-$t=get_title($url);
+$str = file_get_contents($url);  
+$t=get_title($str);
 title_too($t, $id);
 
 
-$u=get_href($url);         //$u - многомерный массив, первый столбик которого - ссылка, а второй признак
+$u=get_href($str, $url);         //$u - многомерный массив, первый столбик которого - ссылка, а второй признак
 
 for ($i=0; $i<count($u[0]); $i++) too($u[0][$i], $u[1][$i]); // пишем ссылку в БД
 /*

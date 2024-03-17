@@ -2,9 +2,9 @@
 <?php
 include_once "db.php";
 
-function get_title($url) //получение ссылок
+function get_title($str) //получение ссылок
 {
-    $str = file_get_contents($url);
+   
     preg_match_all("/<title>(.*?)<\\/title>/is" , $str , $data);
     
     return($data[1][0]);
@@ -20,7 +20,7 @@ function get_title($url) //получение ссылок
 Функция предназначена для использования поисковым роботом типа "Паук". 
 */
 
-function get_href($url)
+function get_href($str, $url)
 {
     $urlData = parse_url($url);      // парсим URL, разлогая его на элементы
     $scheme = $urlData["scheme"];    // записываем первую часть урла (http или https)
@@ -39,7 +39,7 @@ $regex = "/href*=*(\"|\')[^>]+?(\"|\')/";
  // +       - может повторяться от одного до бесконечности раз (сколько угодно символов)
  // ?       - указывает брать минимальное значение символов между кавычками или апострофами
 
-$str = file_get_contents($url);             // считывание страницы в переменную $str
+           // считывание страницы в переменную $str
 
 preg_match_all($regex, $str, $u );          // поиск строк по регулярному выражению и запись их в массив $u[][]
 
